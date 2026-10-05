@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/${POSTGRES_DB:devops_monitoring}
+    username: ${POSTGRES_USER:devops_user}
+    password: ${POSTGRES_PASSWORD:devops_password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret: ${JWT_SECRET:dev-development-secret-key-for-jwt-signing-change-in-production-must-be-at-least-256-bits}
+
+app:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}

@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────────
+#  DevOps Monitoring Dashboard — .gitignore
+# ─────────────────────────────────────────────────────────────────
+
+# Environment secrets — NEVER commit production .env
+.env.production
+.env.local
+.env.*.local
+
+# Keep .env (development defaults) — remove if you prefer
+# .env
+
+# ─── Backend ───
+backend/target/
+backend/.mvn/
+!backend/.mvn/wrapper/maven-wrapper.jar
+!backend/.mvn/wrapper/maven-wrapper.properties
+backend/mvnw
+backend/mvnw.cmd
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ─── Frontend ───
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ─── Logs ───
+*.log
+logs/
+*.log.*
+
+# ─── IDEs ───
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ─── OS ───
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Docker ───
+# Keep docker-compose.yml in version control
+# docker-compose.override.yml if using overrides
+
+# ─── Misc ───
+*.tmp
+*.temp
+*.bak
+*.swp
+.cache/
